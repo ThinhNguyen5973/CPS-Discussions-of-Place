@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.album {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 400px;
+}
+
+#albumImage {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.25s ease-in-out;
+}
+
+#albumImage.fade {
+    opacity: 0;
+}
+
+.nav-btn {
+    background: rgba(102, 126, 234, 0.9);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-btn:hover {
+    background: #667eea;
+    transform: scale(1.1);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.info {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+#counter {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.hint {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .album { padding: 15px; }
+    h1 { font-size: 1.4em; }
+    .nav-btn { width: 40px; height: 40px; font-size: 1.2em; }
+    .image-container { min-height: 250px; }
+}
